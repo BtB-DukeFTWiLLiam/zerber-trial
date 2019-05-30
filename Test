@@ -1,0 +1,27 @@
+{
+  // Name of the step
+  "test": {
+
+    // Command to run
+    // "npm run command"
+    "command": "test",
+
+    // Human readable title of the step
+    // Will be displayed on Github Pull Request page
+    "title": "JS tests"
+
+    // [Optional] Run the step only after following steps successfully completed
+    "runAfter": ["typecheck", "typecheck"],
+
+    // [Optional] Branch ro run step in
+    // If specified will only run the step in the branch
+    "branch": "staging",
+
+    // [Optional] If true, npm command of the step will be passed with list of files changed in the branch of PR
+    // E.g. npm run test -- changed.js another-changed-file.js
+    "isPartial": true,
+
+    // [Optional] Filter files passed to npm command when "isPartial: true"
+    "fileRegexp": "\\.js$",
+  }
+}
